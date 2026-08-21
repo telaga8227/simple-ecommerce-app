@@ -1,0 +1,69 @@
+GET http://localhost:5001/
+
+###
+
+POST http://localhost:5001/api/user/signup
+Content-Type: application/json
+
+{
+    "username":"hrishi07",
+    "name":"Hrishi",
+    "email":"hrishi@xeample.com",
+    "password":"hrishi@2026"
+}
+
+###
+
+POST http://localhost:5001/api/user/login
+Content-Type: application/json
+
+{
+    "username":"hrishi07",
+    "password":"hrishi@2026"
+}
+
+###
+
+POST http://localhost:5001/api/products/add
+Content-Type: application/json
+
+{
+    "name":"One Plus Nord 5",
+    "description":"Best limited deal hurry up to grab",
+    "price":28999,
+    "category":"Mobiles",
+    "brand":"One PLus",
+    "rating": {
+        "avgRating":4,
+        "noOfUsersRated":10
+        },
+    "discountInPercentage":10,
+
+    "stock":3,
+    "image":"https://vui.unsplash.com/resize?height=256&quality=60&type=auto&url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcS7BwE-Ern9UfD0CD0yM5way4QMM0nrH46rrN5Ixcae6A%26s%3D10&sign=BTwMNjRtHf2jIn9akzycF4wrY_vxGNyRmi3uJJw_uy8"
+}
+
+###
+
+GET http://localhost:5001/api/products/
+Content-Type: application/json
+
+###
+
+PUT http://localhost:5001/api/products/update/6a50ad36fd0f951279cbd1ca
+Content-Type: application/json
+
+{
+   "brand":null,
+   "category": null
+}
+
+###
+
+DELETE http://localhost:5001/api/products/delete/6a50ad36fd0f951279cbd1ca
+Content-Type: application/json
+
+{
+    "brand": "One PLus",
+    "category": "Mobiles"
+}
