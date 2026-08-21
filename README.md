@@ -37,31 +37,8 @@ mern-e-commerce/
 
 ##  Tech Stack
 
-* Frontend : HTML5, CSS3 (Flexbox/Grid animations), JavaScript (ES6+), React.js
-* Backend : Node.js, Express.js
+* Frontend : HTML, CSS, JavaScript, React.js
+* Backend : Node.js, Express.js, MongoDB
 * Version Control : Git / GitHub
 
 ---
-
-##  Installation & Setup
-
-Follow these quick steps to launch the repository locally on your device:
-
-### 1. Clone the Repository
-bash
-git clone https://github.com
-cd simple-ecommerce-app
-
-
-### 2. Configure Backend Dependencies
-bash
-cd backend
-node server.js
-
-
-### 3. Configure Frontend Dependencies
-Open a second terminal window:
-bash
-cd frontend
-npm install
-npm start
