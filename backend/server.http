@@ -30,7 +30,7 @@ Content-Type: application/json
 {
     "name":"One Plus Nord 5",
     "description":"Best limited deal hurry up to grab",
-    "price":28999,
+    "price":31999,
     "category":"Mobiles",
     "brand":"One PLus",
     "rating": {
@@ -43,6 +43,25 @@ Content-Type: application/json
     "image":"https://vui.unsplash.com/resize?height=256&quality=60&type=auto&url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcS7BwE-Ern9UfD0CD0yM5way4QMM0nrH46rrN5Ixcae6A%26s%3D10&sign=BTwMNjRtHf2jIn9akzycF4wrY_vxGNyRmi3uJJw_uy8"
 }
 
+###
+POST http://localhost:5001/api/products/add
+Content-Type: application/json
+
+{
+    "name":"Traditional wear",
+    "description":"Fast selling hurry up to grab",
+    "price":1899,
+    "category":"Fashion",
+    "brand":"popular",
+    "rating": {
+        "avgRating":4,
+        "noOfUsersRated":60
+        },
+    "discountInPercentage":"10%",
+
+    "stock":"In stock",
+    "image":"https://i.pinimg.com/236x/da/e9/74/dae974f9782e0cc39d0cac3082ad9e75.jpg"
+}
 ###
 
 GET http://localhost:5001/api/products/

@@ -110,6 +110,7 @@ class LoginForm extends Component {
         return (
             <div className="login-form-container">
                 <form className="form-container" onSubmit={this.submitForm}>
+                    <h1>Online Shop</h1>
                     <div className="input-container"> {this.renderUsernameField()}</div>
                     <div className="input-container"> {this.renderPasswordField()}</div>
                     <button type="submit" className="login-button"> Login </button>                      

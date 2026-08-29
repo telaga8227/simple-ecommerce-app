@@ -2,13 +2,13 @@ import mongoose from 'mongoose'
 
 const productSchema = mongoose.Schema({
     name: {
-        type: String, required: true
+        type: String, //required: true
     },
     description: {
         type: String
     },
     price: {
-        type: Number, required: true
+        type: Number, //required: true
     },
     category: {
         type: String,default:null
@@ -24,7 +24,10 @@ const productSchema = mongoose.Schema({
         type: String
     },
     discountInPercentage: {
-        type: Number, default: 0
+        type: String,default:"0%"
+    },
+    stock: {
+        type:String
     }
 
 }, {

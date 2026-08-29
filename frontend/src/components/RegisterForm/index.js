@@ -27,11 +27,16 @@ class RegisterForm extends Component {
     }
 
     onSubmitSuccess = jwtToken => {
+        const {name} =this.state
         this.setState({
             username: '', name: '', email: '', password: '',showSubmitError:false, isRegistrationSuccess:true
         })
 
         Cookies.set('jwt_token', jwtToken, {
+            expires: 30, path: '/'
+        })
+
+        Cookies.set('user_name', name, {
             expires: 30, path: '/'
         })
 

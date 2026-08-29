@@ -7,5 +7,16 @@
 }
 
 .cart-img{
-    width:300px;
+    width:350px;
 }
+
+.shop-now-btn{
+    background-color:rgb(79, 79, 204);
+    border-radius:5px;
+    color:#ffffff;
+    font-size:20px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+}
+

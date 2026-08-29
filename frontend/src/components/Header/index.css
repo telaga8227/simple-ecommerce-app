@@ -1,32 +1,38 @@
 .nav-header {
+    position:sticky;
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
+    border-bottom: 1px solid rgb(12, 6, 6);
 }
 
 .nav-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;  
-   
-    margin:0 auto;
+    width: 90%;
+    margin: auto;
     padding: 10px;
-    box-shadow: 0px 0px 3px;
+    
 }
 
 .user-name{
     margin:20px;
     font-style:italic;
+    font-size:20px;
+    width:20%;
+
 }
 
 .search {
     margin-left: 30px;
     height: 30px;
-    
+    width:20%;
     flex-grow:0;
     cursor: pointer;
+  
 }
+
 
 .nav-menu {
     display: flex;
@@ -34,13 +40,20 @@
     justify-content: flex-end;
     align-items:center;
     flex: 1;
-    margin-right: 10px;
+    margin-right: 50px;
     list-style-type: none;
+    
 
 }
 .nav-link{
     text-decoration:none;
-    color:#333;
+    color:grey;
+    font-weight:normal;
+}
+.nav-link.active{
+    text-decoration:none;
+    color:rgb(52, 52, 55);
+    font-weight:bold;
 }
 
 .nav-paths {
@@ -54,7 +67,7 @@
 }
 
 .logout-button {
-
+    margin-right:30px;
     width: 70px;
     height: 30px;
     border-radius: 10px;
@@ -65,4 +78,18 @@
 
 .logout-button:hover {
     background-color: rgb(78, 78, 236);
+}
+
+.cart-count-badge {
+  background-color: #bfdbfe;
+  color: #0967d2;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 50%;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-left: 8px;
 }
