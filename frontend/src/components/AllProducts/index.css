@@ -1,23 +1,20 @@
-/* 1. Arranges products row-wise and removes the list dots */
+
 .product-list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* Allows products to wrap to the next line if screen is full */
-  gap: 5px;       /* Adds horizontal and vertical spacing between items */
+  flex-wrap: wrap; 
+  gap: 5px;      
   list-style-type: none !important; 
   margin: 20px 20px;
- 
-  
 }
 
-/* 2. Structures each product into a neat e-commerce card wrapper */
 .product-card{
   display: flex;
   flex-direction: column;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 16px;
-  width: 250px; /* Gives cards a standardized, structured width */
+  width: 250px; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
   background-color: #98d7f3;
  
@@ -26,20 +23,17 @@
 .product-image{
   height:200px;
   width:200px;
-  
-}
+  }
 
-/* 3. Styles your content sub-elements inside the card */
+
 .product-details {
   display: flex;
   gap: 8px;
-  
- 
 }
 
 .product-price-rating {
   display: flex;
-  justify-content: space-between; /* Aligns price to left, star rating to right */
+  justify-content: space-between;
   align-items: center;
   font-weight: bold;
 }
