@@ -12,7 +12,7 @@ import AddProduct from './Admin/addProduct'
 import EditProduct from './Admin/editProduct'
 import ProductItemDetails from './components/ProductItemDetails'
 import CartContext from './context/CartContext'
-//import AllProducts from './components/AllProducts'
+
 import './App.css';
 
 class App extends Component {
@@ -23,22 +23,14 @@ class App extends Component {
     activeSearch: ''
   }
 
-  /*addCartItem = product => {
-    this.setState(prevState => ({ 
-      cartList: [...prevState.cartList, product] 
-    }))
-  }*/
-
   addCartItem = product => {
   const {cartList} = this.state
-
-  // 1. Check if the product is already present in the cart list array
+    
   const isProductAlreadyPresent = cartList.find(
     eachItem => eachItem.id === product.id
   )
 
-  if (isProductAlreadyPresent !== undefined) {
-    // 2. If it's already there, map through and update only its quantity value
+  if (isProductAlreadyPresent !== undefined) { 
     this.setState(prevState => ({
       cartList: prevState.cartList.map(eachItem => {
         if (eachItem.id === product.id) {
@@ -49,7 +41,6 @@ class App extends Component {
       }),
     }))
   } else {
-    // 3. If it's a completely new item, append it as a new row to the array
     this.setState(prevState => ({
       cartList: [...prevState.cartList, product],
     }))
