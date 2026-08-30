@@ -46,6 +46,3 @@ class Cart extends Component {
 }
 
 export default Cart
-
-//{cartList.map(eachItem=> (
-//<p key={eachItem.id}>{eachItem.name}</p>))}
