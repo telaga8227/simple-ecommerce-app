@@ -2,7 +2,6 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
-//import registerUser from './controllers/authController.js'
 import authRouter from './routers/authRouter.js'
 import productRouter from './routers/productRouter.js'
 
@@ -19,10 +18,6 @@ connectDB()
 app.use('/api/user', authRouter)
 
 app.use('/api/products', productRouter)
-
-//POST route for registration
-
-//app.post('/api/register' , registerUser)
 
 app.get('/', (req, res) => {
     res.send('API is running..')
