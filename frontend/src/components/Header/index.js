@@ -92,7 +92,3 @@ const Header = props => {
 }
 export default withRouter(Header)
 
-/*const { history } = props
-                if (history && history.location.pathname !== '/products') {
-                    history.push('/products')
-                }*/
