@@ -10,18 +10,16 @@ const images = [
         "https://res.cloudinary.com/jerrick/image/upload/v1722335650/66a8c1a2f79a20001dfeee0b.jpg"
 ];
 
-//const titles = ["First Slide Title", "Second Slide Title", "Third Slide Title"];
-
 function BootstrapCarousel() {
         const [currentIndex, setCurrentIndex] = useState(0);
-        // Automatically transition slides every 3 seconds
+        
         useEffect(() => {
                 const timer = setInterval(() => {
                         setCurrentIndex((prevIndex) =>
                                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
                         );
                 }, 2000);
-                // Clean up the memory timer when the component unmounts
+               
                 return () => clearInterval(timer);
         }, []);
         return (
@@ -29,13 +27,11 @@ function BootstrapCarousel() {
                         {images.map((image, index) => (
                                 <div
                                         key={index}
-                                        // THIS STYLE PROP CHECKS THE STATE INDEX AND HIDES INACTIVE SLIDES INSTANTLY
                                         style={{ display: index === currentIndex ? 'block' : 'none', }}>
                                         <img
                                                 src={image} alt={`Slide ${index + 1}`}
                                                 style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px' }}
                                         />
-
                                 </div>
                         ))}
                 </div>
@@ -55,68 +51,10 @@ const Home = () => {
                                 <Link to="/products">
                                         <button className="shop-now">Shop now</button>
                                 </Link>
-
                         </div>
                 </>
         )
-
 }
 
 export default Home
 
-{/*   <div className="item-card"><Link>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQom6ImZqauWdcLpF8HpmtWBtg4zSF49ZDzBpBizMGJBg&s=10"
-                                                alt="mobiles"
-                                                className="items-img"
-                                        />
-                                        <h3>Mobiles</h3></Link>
-
-                                </div>
-                                <div >
-                                        <img src=""
-                                                alt=""
-                                                className="items-img"
-                                        />
-                                        <h3>Fashion</h3>
-                                </div>
-                                <div>
-                                        <img src=""
-                                                alt=""
-                                                className="items-img"
-                                        />
-                                        <h3>Electronics</h3>
-                                </div>
-                                <div>
-                                        <img src=""
-                                                alt=""
-                                                className="items-img"
-                                        />
-                                        <h3>sports</h3>
-                                </div>
-                                <div>
-                                        <img src=""
-                                                alt=""
-                                                className="items-img"
-                                        />
-                                        <h3>Furniture</h3>
-                                </div>
-                                <div>
-                                        <img src=""
-                                                alt=""
-                                                className="items-img"
-                                        />
-                                        <h3>kids and Toys</h3>
-                                </div>
-                                <div>
-                                        <img src=""
-                                                alt=""
-                                                className="items-img"
-                                        />
-                                        <h3>Home</h3>
-                                </div>
-
-
-
-                                 {/*<div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(0,0,0,0.7)', color: 'white', padding: '10px 20px', borderRadius: '4px' }}>
-                                                <h3>{titles[index]}</h3>
-                                        </div>*/}
