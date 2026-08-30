@@ -73,7 +73,7 @@ export const loginUser = async (req,res) => {
                 error_msg: "USER not found. Please Register first"
             });
         }
-        //compare the subbimted paassword with hashed passwors in db
+        //compareing the subbimted paassword with hashed passwors in db
 
         if (!password ){
             return res.status(400).json({
@@ -89,8 +89,6 @@ export const loginUser = async (req,res) => {
             })
         }
 
-        //Invalid request payload or missing account credentials
-
         const isMatch = await bcrypt.compare(password, user.password)
         if(!isMatch){
             return res.status(400).json({
@@ -105,7 +103,6 @@ export const loginUser = async (req,res) => {
             { expiresIn: '1d' }
         );
 
-        // Send back success and the token to the frontend
         return res.status(200).json({
             success: true,
             message: "Login successful!",
@@ -123,7 +120,3 @@ export const loginUser = async (req,res) => {
 };
 
     
-
-
-/*createNewUser.token=token
-        await createNewUser.save()*/
