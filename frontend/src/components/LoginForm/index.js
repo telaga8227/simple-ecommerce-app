@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom'
 
 import './index.css'
 
-
 class LoginForm extends Component {
     state = {
         username: '', password: '', showSubmitError: false, errorMsg: '', isLoggedIn: false
@@ -20,10 +19,7 @@ class LoginForm extends Component {
 
     onSubmitSuccess = (jwtToken, name) => {
         this.setState({ isLoggedIn: true, showSubmitError: false })
-
         //const { history } = this.props
-        
-
         Cookies.set('jwt_token', jwtToken, {
             expires: 30,
             path: '/',
@@ -44,8 +40,6 @@ class LoginForm extends Component {
         console.log(errorMsg)
         this.setState({ showSubmitError: true, errorMsg })
     }
-
-
 
     submitForm = async event => {
         event.preventDefault()
@@ -127,5 +121,4 @@ class LoginForm extends Component {
 }
 export default LoginForm
 
-//<span > <Link to = '/signup' className="register" > Register Here </Link> </span> 
 
