@@ -18,10 +18,6 @@ class AllProducts extends Component {
         this.getProducts()
     }
 
-     /*onChangeSearchInput = event => {
-        this.setState({ searchInput: event.target.value })
-    }*/
-
     getProducts = async () => {
         this.setState({ isLoading: true })
 
@@ -136,73 +132,3 @@ class AllProducts extends Component {
 
 export default AllProducts
 
-/*
-const exactValue = activeSearch.toLowerCase()
-{
-            const matchesName = eachProduct.name.toLowerCase().includes(exactValue)
-            const matchesBrand = eachProduct.brand.toLowerCase().includes(exactValue)
-            return matchesName || matchesBrand
-        }
-<div className="product-price-rating">
-     <span className="product-price"> Price :<FaRupeeSign />{product.price} </span> <br/>
-      <span className="product-rating"> Rating : {product.rating}  <FaStar /></span>
-</div>
-
-                        ---
-             if (response.ok) {
-
-            //const dataObject = fetchedData;
-            if (fetchedData) {
-                //if (dataObject && dataObject.items) {
-                const updatedData = fetchedData.items.map(product => ({  //dataObject.items.map
-                    id: product._id || product.id,
-                    productId: product.productId,
-                    name: product.name,
-                    description: product.description,
-                    price: product.price,
-                    category: product.category,
-                    brand: product.brand,
-                    //rating: product.rating,
-                    stock: product.stock,
-                    image: product.image,
-                    discount: product.discountInPercentage || 0,
-
-                    rating: product.rating ? product.rating.avgRating : 0,
-                    reviewsCount: product.rating ? product.rating.noOfUsersRated : 0
-                }))
-
-                this.setState({
-                    productsList: updatedData,
-                    isLoading: false, // This will now execute and turn off the loader
-                })
-            } else {
-                // Fallback if data structure is unexpectedly empty
-                this.setState({ isLoading: false })
-                //console.error("allItems property not found in response object");
-            }
-        } else {
-            // Always clear the loader if the network request fails
-            this.setState({ isLoading: false })
-        }
-
-                        ----
-                        {productsList.map((product) => (
-                    <li key={product.id}>
-                        <div className ="product-card">
-                            <img src={product.image} alt={product.title} className="product-image" />
-                            <div className="product-details">
-                                <h3 className="product-name">{product.name}</h3>
-                                <p className="product-description">{product.description}</p>
-                                {product.category && (<p className="product-category"> Category : {product.category} </p>)}
-                                {product.brand && (<h5 className="product-brand"> BranD ;{product.brand} </h5>)}
-                                <p className="product-price"> Price :<FaRupeeSign />{product.price} </p>
-                                <p className="product-rating"> Rating : {product.rating}  <FaStar /> ({product.reviewsCount} reviews) </p>
-                                {product.discount > 0 && (<p className="discount"> Discount: {product.discount} % OFF </p>)}
-                                <button className="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                    </li>
-
-                ))}
-
-                        */
