@@ -16,7 +16,6 @@ class ProductItemDetails extends Component {
         showModal: false
     }
 
-
     componentDidMount() {
         this.getProductData()
     }
@@ -162,8 +161,6 @@ class ProductItemDetails extends Component {
                                     </button>
                                 </div>
                             </div>
-
-                            {/* Custom React Popup Modal */}
                             
                             {this.state.showModal && (
                                 <div className="modal-overlay">
@@ -213,30 +210,3 @@ class ProductItemDetails extends Component {
 }
 
 export default ProductItemDetails
-
-/*<div className="quantity-container">
-                  <button
-                    type="button"
-                    className="quantity-controller-button"
-                    onClick={this.onDecrementQuantity}
-                  >
-                    <BsDashSquare className="quantity-controller-icon" />
-                  </button>
-                  <p className="quantity">{quantity}</p>
-                  <button
-                    type="button"
-                    className="quantity-controller-button"
-                    onClick={this.onIncrementQuantity}
-                  >
-                    <BsPlusSquare className="quantity-controller-icon" />
-                  </button>
-                </div> */
-
-/* <ul className="similar-products-list">
-              {similarProductsData.map(eachSimilarProduct => (
-                <SimilarProductItem
-                  productDetails={eachSimilarProduct}
-                  key={eachSimilarProduct.id}
-                />
-              ))}
-            </ul> */
