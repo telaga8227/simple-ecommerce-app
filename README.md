@@ -49,6 +49,10 @@ mern-e-commerce/
 
 ---
 
+## Deployed URLs
+Live Deployment Link: [https://simple-ecommerce-app-beige.vercel.app/]
+GitHub Code Repository: [https://github.com/telaga8227/simple-ecommerce-app]
+
 ##  Tech Stack
 
 * Frontend : HTML, CSS, JavaScript, React.js
